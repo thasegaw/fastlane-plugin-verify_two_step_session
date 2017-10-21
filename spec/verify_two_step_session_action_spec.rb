@@ -8,11 +8,11 @@ describe Fastlane::Actions::VerifyTwoStepSessionAction do
         expect { Fastlane::Actions::VerifyTwoStepSessionAction.run({ user: 'foo@example.com' }) }.to raise_error(FastlaneCore::Interface::FastlaneError, "test message")
       end
     end
-    context 'when InvalidUserCredentialsError has occurred' do
+    context 'when NoUserCredentialsError has occurred' do
       before do
         allow(Spaceship::Tunes).to receive(:login).and_raise(Spaceship::Client::NoUserCredentialsError)
       end
-      it 'raises InvalidUserCredentialsError' do
+      it 'raises NoUserCredentialsError' do
         expect { Fastlane::Actions::VerifyTwoStepSessionAction.run({ user: 'foo@example.com' }) }.to raise_error(FastlaneCore::Interface::FastlaneError, "Your session cookie has been expired.")
       end
     end

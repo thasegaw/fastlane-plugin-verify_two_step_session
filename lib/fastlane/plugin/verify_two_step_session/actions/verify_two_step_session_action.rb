@@ -9,7 +9,7 @@ module Fastlane
         rescue Spaceship::Client::InvalidUserCredentialsError => e
           # Invalid username and password combination
           UI.user_error!(e.message)
-        rescue
+        rescue StandardError
           UI.user_error!('Your session cookie has been expired.')
         end
 
