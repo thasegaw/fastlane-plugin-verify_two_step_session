@@ -21,7 +21,7 @@ Verifies the session cookie for 'Two-Step verification for Apple ID'
 Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
 
 ```
-verify_two_step_session(user: test@example.com)
+verify_two_step_session(user: 'test@example.com')
 ```
 
 ## Run tests for this plugin
