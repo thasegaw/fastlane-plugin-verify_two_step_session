@@ -24,6 +24,16 @@ Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plu
 verify_two_step_session(user: 'test@example.com')
 ```
 
+### sample output
+
+```
+[11:37:46]: -------------------------------------
+[11:37:46]: --- Step: verify_two_step_session ---
+[11:37:46]: -------------------------------------
+[11:37:47]: Login successful
+[11:37:47]: Your session cookie will expire at 2017-11-02 13:20:24 +0900 (10 days left).
+```
+
 ## Run tests for this plugin
 
 To run both the tests, and code style validation, run
