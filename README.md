@@ -1,6 +1,7 @@
 # verify_two_step_session plugin
 
 [![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-verify_two_step_session)
+[![Gem Version](https://badge.fury.io/rb/fastlane-plugin-verify_two_step_session.svg)](https://badge.fury.io/rb/fastlane-plugin-verify_two_step_session)
 [![CircleCI](https://circleci.com/gh/thasegaw/fastlane-plugin-verify_two_step_session.svg?style=svg)](https://circleci.com/gh/thasegaw/fastlane-plugin-verify_two_step_session)
 
 ## Getting Started
