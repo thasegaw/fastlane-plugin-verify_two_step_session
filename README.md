@@ -14,7 +14,10 @@ fastlane add_plugin verify_two_step_session
 
 ## About verify_two_step_session
 
-Verifies the session cookie for 'Two-Step verification for Apple ID'
+Verifies the session cookie for 'Two-Factor authentication/Two-Step verification for Apple ID'
+- [2-step-verification(spaceship)](https://github.com/fastlane/fastlane/tree/master/spaceship#2-step-verification)
+- [Two-factor authentication for Apple ID](https://support.apple.com/en-us/HT204915)
+- [Two-step verification for Apple ID](https://support.apple.com/en-us/HT204152)
 
 ## Example
 

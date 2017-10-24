@@ -66,12 +66,12 @@ module Fastlane
       #####################################################
 
       def self.description
-        "Verifies the session cookie for 'Two-Step verification for Apple ID'"
+        "Verifies the session cookie for 'Two-Factor authentication/Two-Step verification for Apple ID'"
       end
 
       def self.details
         [
-          "This action will validate the session cookie for 'Two-Step verification for Apple ID'",
+          "This action will validate the session cookie for 'Two-Factor authentication/Two-Step verification for Apple ID'",
           "and display the remaining days until an expiration date."
         ].join(' ')
       end
@@ -80,7 +80,7 @@ module Fastlane
         [
           FastlaneCore::ConfigItem.new(key: :user,
                                        env_name: "FL_VERIFY_TWO_STEP_SESSION_USER",
-                                       description: "User for Two-Step verification for Apple ID (email address)",
+                                       description: "Apple ID (email address)",
                                        optional: true)
         ]
       end
@@ -95,7 +95,7 @@ module Fastlane
 
       def self.example_code
         [
-          'verify_two_step_session(user: test@example.com)'
+          "verify_two_step_session(user: 'test@example.com')"
         ]
       end
 

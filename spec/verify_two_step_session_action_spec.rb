@@ -16,6 +16,20 @@ describe Fastlane::Actions::VerifyTwoStepSessionAction do
         expect { Fastlane::Actions::VerifyTwoStepSessionAction.run({ user: 'foo@example.com' }) }.to raise_error(FastlaneCore::Interface::FastlaneError, "Your session cookie has been expired.")
       end
     end
+    context 'when NoUserCredentialsError has occurred' do
+      before do
+        allow(Spaceship::Tunes).to receive(:login).and_return(true)
+      end
+      context 'when NoUserCredentialsError has occurred' do
+        before do
+          allow(YAML).to receive(:safe_load).and_return(nil)
+          allow(Spaceship::Tunes.client).to receive(:load_session_from_env).and_return(true)
+        end
+        it 'is not called check_expiration_time' do
+          expect(Fastlane::Actions::VerifyTwoStepSessionAction).to receive(:check_expiration_time).exactly(0).times
+        end
+      end
+    end
   end
 
   describe '#check_expiration_time' do
